@@ -1,0 +1,252 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>S.R.S Windows — Website & Lead Audit</title><style>
+:root{--bg:#0d1117;--panel:#161b22;--ink:#e6edf3;--mut:#9aa7b4;--line:#2a3340;--accent:#2f81f7;
+  --good:#3fb950;--bad:#f85149;--gradF:#f85149;--gradD:#e8702a;--gradC:#d29922;--gradB:#3fb950;--gradA:#2ea043;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.eyebrow{letter-spacing:.18em;text-transform:uppercase;font-size:12px;color:var(--mut);font-weight:600}
+header{padding:46px 0 28px;border-bottom:1px solid var(--line);background:radial-gradient(1200px 400px at 70% -10%,rgba(47,129,247,.18),transparent)}
+h1{font-size:30px;font-weight:800;margin:10px 0 6px;letter-spacing:-.01em}
+.sub{color:var(--mut);font-size:15px}
+.hero{display:grid;grid-template-columns:300px 1fr;gap:26px;align-items:center;margin:34px 0 8px}
+@media(max-width:760px){.hero{grid-template-columns:1fr}}
+.gradecard{border:1px solid var(--line);border-radius:18px;padding:26px;text-align:center;position:relative;overflow:hidden}
+.gc-F{background:linear-gradient(160deg,#2a1410,#1c2330)}.gc-D{background:linear-gradient(160deg,#2a1c10,#1c2330)}
+.gc-C{background:linear-gradient(160deg,#2a2410,#1c2330)}.gc-B{background:linear-gradient(160deg,#102a1a,#1c2330)}
+.bigletter{font-size:96px;font-weight:900;line-height:1;position:relative}
+.bl-F{color:var(--gradF);text-shadow:0 0 40px rgba(248,81,73,.45)}
+.bl-D{color:var(--gradD);text-shadow:0 0 40px rgba(232,112,42,.45)}
+.bl-C{color:var(--gradC);text-shadow:0 0 40px rgba(210,153,34,.45)}
+.score100{font-size:18px;color:var(--mut);margin-top:6px;position:relative}
+.heroread h2{font-size:21px;font-weight:800;margin-bottom:10px}
+.heroread p{color:var(--mut);font-size:15.5px}
+.heroread .tag{display:inline-block;margin-top:14px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;font-size:13px;color:var(--ink);background:var(--panel)}
+section{padding:34px 0;border-bottom:1px solid var(--line)}
+.h{font-size:13px;color:var(--mut);text-transform:uppercase;letter-spacing:.14em;font-weight:700;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}}
+.row{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center}
+.rname{font-weight:600;font-size:15px}
+.bar{height:7px;background:#0b0f15;border-radius:99px;margin-top:9px;overflow:hidden}
+.fill{height:100%;border-radius:99px}
+.badge{font-weight:800;font-size:15px;min-width:46px;height:46px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#0d1117}
+.gF{background:var(--gradF)}.gD{background:var(--gradD)}.gC{background:var(--gradC)}.gB{background:var(--gradB);color:#06210f}.gA{background:var(--gradA);color:#06210f}
+.sc{font-size:12px;color:var(--mut);margin-top:3px}
+.flag{background:linear-gradient(160deg,#2a1410,#161b22);border:1px solid #6f2a1f;border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.flag .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--bad);font-weight:700;margin-bottom:8px}
+.win{background:linear-gradient(160deg,#0f2417,#161b22);border:1px solid #1f6f3a;border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.win .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--good);font-weight:700;margin-bottom:8px}
+.warn{background:linear-gradient(160deg,#2a2410,#161b22);border:1px solid #6f5a1f;border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.warn .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--gradC);font-weight:700;margin-bottom:8px}
+.flag p,.win p,.warn p{color:var(--mut);font-size:14.5px;margin-bottom:9px}
+.flag p:last-child,.win p:last-child,.warn p:last-child{margin-bottom:0}
+.flag b,.win b,.warn b{color:var(--ink)}
+.flag ul,.win ul,.warn ul{margin:0 0 9px 20px;color:var(--mut);font-size:14.5px}
+.flag li,.win li,.warn li{margin-bottom:6px}
+.code{background:#0b0f15;border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin:12px 0;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:12.5px;line-height:1.85;color:var(--mut);overflow-x:auto}
+.code .ph{color:#ff9d94;font-weight:700}.code .ok{color:#84e0a8;font-weight:700}.code .c{color:#5b6672}
+.cmp{width:100%;border-collapse:collapse;font-size:14px;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.cmp th{text-align:left;padding:11px 14px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);border-bottom:1px solid var(--line);font-weight:700}
+.cmp td{padding:11px 14px;border-bottom:1px solid var(--line);color:var(--mut);vertical-align:top}
+.cmp tr:last-child td{border-bottom:none}.cmp td b{color:var(--ink)}.cmp tr.you td{background:#241a12}
+.cmp .yes{color:var(--good);font-weight:700}.cmp .no{color:var(--bad);font-weight:700}
+.opp{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:760px){.opp{grid-template-columns:1fr}}
+.ocard{background:linear-gradient(160deg,#0f2417,#161b22);border:1px solid #1f6f3a;border-radius:14px;padding:20px;text-align:center}
+.ocard .lab{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--mut)}
+.ocard .big{font-size:30px;font-weight:900;color:var(--good);margin:8px 0 2px}
+.ocard .small{font-size:13px;color:var(--mut)}
+.oppnote{color:var(--mut);font-size:14px;margin-top:14px}.oppnote b{color:var(--ink)}
+.arrow{display:flex;align-items:center;justify-content:center;gap:18px;margin:6px 0 2px;flex-wrap:wrap}
+.pill{font-size:60px;font-weight:900;line-height:1}
+.pill.from-F{color:var(--gradF)}.pill.from-D{color:var(--gradD)}.pill.from-C{color:var(--gradC)}
+.pill.to{color:var(--gradA)}
+.pilllab{font-size:12px;color:var(--mut);text-align:center;text-transform:uppercase;letter-spacing:.1em}
+.ar{font-size:34px;color:var(--mut)}
+ul.road{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:760px){ul.road{grid-template-columns:1fr}}
+ul.road li{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:11px 14px;font-size:14.5px}
+.road2 li{border-left-color:var(--good)}
+.cta{text-align:center;padding:40px 0 56px}
+.cta h2{font-size:22px;font-weight:800;margin-bottom:8px}
+.cta p{color:var(--mut);font-size:15px}
+footer{color:var(--mut);font-size:12.5px;text-align:center;padding:22px 0 40px;line-height:1.7}
+.gscale{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:26px 26px 20px;margin-top:16px}
+.gscale .gtitle{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--mut);font-weight:700;margin-bottom:26px;text-align:center}
+.gtrack{position:relative;height:14px;border-radius:8px;background:linear-gradient(90deg,#f85149 0%,#f85149 18%,#e3833c 34%,#d4a72c 52%,#7ec46a 74%,#3fb950 100%);margin:0 4px}
+.gmark{position:absolute;top:-46px;transform:translateX(-50%);text-align:center;white-space:nowrap}
+.gmark .gm-lab{font-size:10.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--mut);font-weight:700}
+.gmark .gm-val{font-size:19px;font-weight:900;line-height:1.15}
+.gmark:after{content:"";position:absolute;left:50%;top:100%;width:2px;height:22px;transform:translateX(-50%);background:currentColor;opacity:.75}
+.gmark.now{color:var(--bad)}.gmark.now .gm-val{color:var(--bad)}
+.gmark.proj{color:var(--good)}.gmark.proj .gm-val{color:var(--good)}
+.gmark.proj{top:auto;bottom:-52px}
+.gmark.proj:after{top:auto;bottom:100%}
+.gdot{position:absolute;top:50%;width:16px;height:16px;border-radius:50%;transform:translate(-50%,-50%);border:3px solid #0d1117}
+.gdot.now{background:var(--bad)}.gdot.proj{background:var(--good)}
+.gticks{display:flex;justify-content:space-between;margin:66px 4px 0;font-size:11px;letter-spacing:.08em;color:var(--mut);font-weight:700}
+@media(max-width:620px){.gmark .gm-lab{font-size:9px}.gmark .gm-val{font-size:16px}}
+</style></head><body>
+<header>
+  <div class="wrap">
+    <div class="eyebrow">Website &amp; Lead Audit &middot; S.R.S Windows Ltd &middot; Medway &amp; Kent</div>
+    <h1>You Have Two Websites. One Of Them Sends Every Caller To 07890 000000.</h1>
+    <div class="sub">Prepared for Toni &amp; Stephen Stewart &middot; S.R.S Windows Ltd &middot; 17 September 2026 &middot; AG1 Consulting</div>
+
+    <div class="hero">
+      <div class="gradecard gc-F">
+        <div class="bigletter bl-F" style="font-size:54px">2</div>
+        <div class="score100">websites &middot; two phone numbers &middot; one of them a placeholder</div>
+      </div>
+      <div class="heroread">
+        <h2>You want more work and you have taken on staff to handle it. Before any advertising, the first job is making sure the people already finding you can actually reach you.</h2>
+        <p>Right now there are two S.R.S Windows websites. <b>The older one tells visitors to ring 07890 000000</b> &mdash; a
+        dummy number that connects to nobody. The newer one works, but only sells one product and cannot measure a single
+        enquiry.</p>
+        <div class="tag">Both sites read 17 September 2026 &middot; company record checked at Companies House</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="h">Finding 1 &mdash; The Older Site Dials A Number That Does Not Exist</div>
+    <div class="code">
+srs-windows.co.uk  (with the hyphen)
+
+  Phone shown and dialled:   <span class="ph">07890 000000</span>   (tel:+447890000000) &mdash; 5 links
+  Footer:                    "built and managed by Trades Geeks"
+
+srswindows.co.uk  (no hyphen &mdash; the newer site)
+
+  Phone shown and dialled:   <span class="ok">07889 631 319</span>
+    </div>
+    <div class="flag">
+      <div class="lab">Anyone who finds the older site cannot ring you</div>
+      <p>07890 000000 is a placeholder &mdash; the kind of number a website template ships with before the real one
+      is added. <b>Every homeowner who lands on that site and taps "call" reaches nobody</b>, and you would never know
+      they tried. The site is managed by another company, so it is worth asking them to fix the number today, or taking
+      the site down.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">Finding 2 &mdash; Two Sites, Saying Two Different Things</div>
+    <div class="code">
+                          Older site (hyphen)                 Newer site (no hyphen)
+Sells                     Windows and conservatories          Tiled conservatory roofs only
+Phone                     <span class="ph">07890 000000</span>                        <span class="ok">07889 631 319</span>
+Accreditation shown       FENSA                               <span class="ok">CERTASS 12-1432</span>
+Reviews                   "380+ verified customer reviews"    None shown
+Built by                  Trades Geeks                        Not stated
+    </div>
+    <div class="warn">
+      <div class="lab">Google and customers do not know which one is really you</div>
+      <p>Two sites with different numbers, different products and different claims split whatever authority you have
+      between them, and make a careful customer wonder which is genuine. <b>The claims on the older site &mdash; the
+      review count, the years, the guarantee &mdash; need to be checked before anyone relies on them</b>, because we
+      could not match them to public records, and published claims have to be accurate.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">Finding 3 &mdash; The Newer Site Only Sells One Thing</div>
+    <div class="code">
+Pages on srswindows.co.uk:   <span class="ok">17</span>
+  Main service:   Lightweight tiled conservatory roofs
+  Town pages:     <span class="ok">5</span>  &mdash; Medway, Maidstone, Dartford, Gravesend, Sittingbourne
+  Guides:         <span class="ok">7</span>
+
+Windows:          <span class="ph">not mentioned</span>
+Doors:            <span class="ph">not mentioned</span>
+New conservatories / repairs:  <span class="ph">not mentioned</span>
+    </div>
+    <div class="win">
+      <div class="lab">It is well built &mdash; for one product</div>
+      <p>The newer site is genuinely tidy: fast, town pages, a postcode checker, a clean form, CERTASS shown clearly.
+      <b>But a business called S.R.S Windows has a website that never mentions windows.</b> If you want more work for
+      the team you have just taken on, the site has to sell the full range you actually install.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">Finding 4 &mdash; Nothing Is Measured, And No Reviews Are Shown</div>
+    <div class="code">
+Newer site tracking:   <span class="ph">none</span>  ("This site sets no cookies")
+Google Ads tag:        <span class="ph">none</span>
+Meta pixel:            <span class="ph">none</span>
+Reviews on the site:   <span class="ph">none</span>
+
+Warm Roof Division (Medway):  Google <span class="ok">5.0 from 75 reviews</span>, Which? Trusted Traders <span class="ok">4.9 from 36</span>
+    </div>
+    <div class="flag">
+      <div class="lab">Word of mouth works &mdash; but it is invisible online</div>
+      <p>Your work comes from word of mouth, which means happy customers exist. <b>None of them appear on either
+      website.</b> Meanwhile the conservatory roof firm down the road shows 75 Google reviews. And with no tracking,
+      if you start advertising tomorrow you will not be able to tell which adverts brought in which jobs.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">The Scorecard</div>
+    <div class="grid">
+      <div class="row"><div><div class="rname">Phone number on older site</div><div class="sc">Placeholder 07890 000000</div></div><div class="badge gF">F</div></div>
+      <div class="row"><div><div class="rname">One clear website</div><div class="sc">Two sites, two numbers</div></div><div class="badge gF">F</div></div>
+      <div class="row"><div><div class="rname">Tracking</div><div class="sc">None on the newer site</div></div><div class="badge gF">F</div></div>
+      <div class="row"><div><div class="rname">Reviews shown</div><div class="sc">None on the newer site</div></div><div class="badge gF">F</div></div>
+      <div class="row"><div><div class="rname">Services covered</div><div class="sc">Conservatory roofs only</div></div><div class="badge gD">D</div></div>
+      <div class="row"><div><div class="rname">Town pages</div><div class="sc">5 across Kent</div></div><div class="badge gB">B</div></div>
+      <div class="row"><div><div class="rname">Accreditation</div><div class="sc">CERTASS 12-1432 shown</div></div><div class="badge gB">B</div></div>
+      <div class="row"><div><div class="rname">Enquiry form</div><div class="sc">Clean, with postcode check</div></div><div class="badge gB">B</div></div>
+      <div class="row"><div><div class="rname">Mobile click-to-call</div><div class="sc">Works on the newer site</div></div><div class="badge gB">B</div></div>
+      <div class="row"><div><div class="rname">Established business</div><div class="sc">Trading as a company since 2005</div></div><div class="badge gA">A</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h">What We Would Do, In Order</div>
+    <ul class="road">
+      <li><b>Fix or remove the placeholder number today.</b> Any call from that site currently goes nowhere.</li>
+      <li><b>One website.</b> Pick the newer, better-built site and point the older address at it.</li>
+      <li><b>Sell the full range</b> &mdash; windows, doors, conservatories and roofs &mdash; with the town pages extended to each.</li>
+      <li><b>Put real reviews on the site</b> and start asking every finished job for one.</li>
+      <li><b>Install tracking</b>, so every call and form is counted before a penny goes on advertising.</li>
+      <li><b>Then advertise</b> across Medway and Kent, measured on booked surveys, not clicks.</li>
+    </ul>
+  </div>
+</section>
+
+<div class="cta">
+  <div class="wrap">
+    <h2>Twenty years of trading. The first fix costs nothing.</h2>
+    <p>Fix what is losing calls first, then bring in the work for the new team.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    Prepared by Andrei Givero &middot; AG1 Consulting &middot; 17 September 2026<br><br>
+    For Toni and Stephen Stewart, S.R.S Windows Ltd, Kent. <b>Statements about both websites were read from their own
+    served pages and published sitemaps on 17 September 2026</b> &mdash; the phone numbers and the links that dial them,
+    the footer credit, the products, page counts, town pages, accreditation shown, reviews shown and tracking. The claims
+    quoted from the older site are reproduced as published; <b>we could not verify them and make no finding about how they
+    were written.</b> Review figures for Warm Roof Division are as published on its own site. Company details were checked
+    against the Companies House register (S.R.S Windows Limited, company number 05553479, incorporated 5 September 2005).
+    <b>No revenue, enquiry volume, ranking or return figure is forecast or promised anywhere in this document.</b> Company
+    and platform names are used for identification only. The grades are AG1's own editorial assessment.
+  </div>
+</footer>
+</body></html>
